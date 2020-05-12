@@ -6,8 +6,8 @@ ENV PYTHONUNBUFFERED 1
 
 ENV TZ Asia/Tokyo
 
-RUN apt update
-RUN apt install -y nginx && apt install -y vim
+RUN apt-get update
+RUN apt-get install -y nginx && apt-get install -y vim
 
 RUN mkdir /app
 WORKDIR /app
