@@ -18,6 +18,7 @@ ADD requirements.txt /app
 RUN pip install -r requirements.txt
 
 # copy configuration files.
+COPY ./conf/default /etc/nginx/sites-enabled/default
 COPY ./conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 80
